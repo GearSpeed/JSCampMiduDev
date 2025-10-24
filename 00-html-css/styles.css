@@ -197,6 +197,7 @@ form input[type="text"] {
   padding: 0.75rem 0.5rem;
   font-size: 1rem;
   font-family: inherit;
+  
 }
 
 form input[type="text"]::placeholder {
