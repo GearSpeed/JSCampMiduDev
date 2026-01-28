@@ -65,6 +65,11 @@ body {
   
 }
 
+a{
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
 /* Títulos principales */
 h1 {
   font-size: 2rem;
@@ -341,6 +346,73 @@ header > div{
     &:active{
       background-color: var(--primary-light);
       transform: scale(0.90);
+    }
+  }
+}
+
+.path-job{
+  display: flex;
+  flex-direction:row;
+  width:100vh;
+  justify-content: left;
+  color: var(--text-muted);
+
+  a{
+    color: var(--text-muted);
+  }
+  p{
+    color: var(--text-primary);
+  }
+}
+
+.title-job{
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+  width: 100vh;
+
+  p{
+    color: var(--text-muted);
+  }
+
+  button{
+    background-color: var(--primary-light);
+    color: var(--text-primary);
+    height: 2.5rem;
+    width: 7.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: all .3s;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover{
+      background-color: var(--primary-hover);
+    }
+
+    &:active{
+      background-color: var(--primary-light);
+      transform: scale(0.90);
+    }
+  }
+
+}
+
+.contain-description{
+  display: flex;
+  width: 100vh;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 5rem;
+  div{
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+    p{
+      display: flex;
+      align-items: center;
+      gap:0.5rem
     }
   }
 }

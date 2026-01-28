@@ -92,26 +92,27 @@
 
             </form>
             <section class="category">
-                <select name="tecnologia" id="">
+                <select name="tecnologia" id="filter-technology">
                     <option value="null">Tecnología</option>
                     <option value="php">php</option>
                     <option value="typescript">TypeScript</option>
                     <option value="javascript">JavaScript</option>
-                    <option value="phyton">Phyton</option>
+                    <option value="python">Python</option>
                 </select>
-                <select name="ubicacion" id="">
+                <select name="ubicacion" id="filter-location">
                     <option value="null">Ubicación</option>
                     <option value="cdmx">CDMX</option>
                     <option value="guadalajara">Guadalajara</option>
                     <option value="monterrey">Monterrey</option>
                     <option value="queretaro">Querétaro</option>
+                    <option value="remoto">Remoto</option>
                 </select>
-                <select name="contrato" id="">
+                <select name="contrato" id="filter-contract">
                     <option value="null">Tipo de contrato</option>
                     <option value="permanente">Permanente</option>
                     <option value="proyecto">Proyecto</option>
                 </select>
-                <select name="experiencia" id="">
+                <select name="experiencia" id="filter-experience">
                     <option value="null">Nivel de experiencía</option>
                     <option value="unaño">1 año</option>
                     <option value="tresaños">3 años</option>
@@ -126,11 +127,15 @@
                 <div class="jobs-listings">
                     <article class="job-listing-card">
                         <div>
-                        <h3>Ingeniero de Software</h3>
-                        <small>Tech Solutions Inc. | Remoto</small>
-                        <p>Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React
-                            y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de
-                            comunicación.</p>
+                            <h3>
+                                <a href="./vacant.html">
+                                    Ingeniero de Software
+                                </a>
+                            </h3>
+                            <small>Tech Solutions Inc. | Remoto</small>
+                            <p>Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React
+                                y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de
+                                comunicación.</p>
                         </div>
                         <button class="button-apply-job" id="boton-importante">Aplicar</button>
                     </article>

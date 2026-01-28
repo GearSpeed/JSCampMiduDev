@@ -19,3 +19,86 @@ jobsListingSection?.addEventListener('click', (event) => {
         element.disabled = true
     }
 })
+
+// Filtro por tecnología
+const filterTech = document.querySelector('#filter-technology')
+
+filterTech?.addEventListener('change', () => {
+    const selectedTechnology = filterTech.value.toLowerCase()
+    const cards = document.querySelectorAll('.job-listing-card')
+
+    cards.forEach(card => {
+        const description = card.textContent.toLowerCase()
+        
+        if (selectedTechnology === 'null') {
+            // Mostrar todas las cards si se selecciona la opción por defecto
+            card.style.display = 'flex'
+        } else if (description.includes(selectedTechnology)) {
+            // Mostrar solo las cards que contienen la tecnología
+            card.style.display = 'flex'
+        } else {
+            // Ocultar las cards que no la contienen
+            card.style.display = 'none'
+        }
+    })
+})
+
+// Filtro por ubicación
+const filterLocation = document.querySelector('#filter-location')
+
+filterLocation?.addEventListener('change', () => {
+    const selectedLocation = filterLocation.value.toLowerCase()
+    const cards = document.querySelectorAll('.job-listing-card')
+
+    cards.forEach(card => {
+        const description = card.textContent.toLowerCase()
+
+        if (selectedLocation === 'null'){
+            card.style.display = 'flex'
+        } else if (description.includes(selectedLocation)){
+            card.style.display = 'flex'
+        } else {
+            card.style.display = 'none'
+        }
+    })
+})
+
+// Filtro por tipo de contrato
+const filterContract = document.querySelector('#filter-contract')
+
+filterContract?.addEventListener('change', () => {
+    const selectedContract = filterContract.value.toLowerCase()
+    const cards = document.querySelectorAll('.job-listing-card')
+
+    cards.forEach(card => {
+        const description = card.textContent.toLowerCase()
+
+        if (selectedContract ==='null'){
+            card.style.display = 'flex'
+        } else if (description.includes(selectedContract)){
+            card.style.display = 'flex'
+        } else {
+            card.style.display = 'none'
+        }
+    })
+})
+
+// Filtro por experiencia
+const filterExperience = document.querySelector('#filter-experience')
+
+filterExperience?.addEventListener('change', ()=>{
+    const selectedExperience = filterExperience.value.toLowerCase()
+    const cards = document.querySelectorAll('.job-listing-card')
+
+    cards.forEach(card => {
+        const description = card.textContent.toLocaleLowerCase()
+
+        if (selectedExperience === 'null'){
+            card.style.display = 'flex'
+        } else if (description.includes(selectedExperience)){
+            card.style.display = 'flex'
+        } else {
+            card.style.display = 'none'
+        }
+    })
+})
