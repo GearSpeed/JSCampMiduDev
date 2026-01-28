@@ -41,11 +41,8 @@
                         element.className = 'is-active';
                         break;
                     default:
-                        alert('Página no encontrada 😅')
                         break;
                 }
-            } else {
-                alert('Página no encontrada 😵')
             }
         })
     </script>
@@ -80,46 +77,48 @@
             <p>Explora miles de oportunidades en el sector tecnológico</p>
         </div>
         <div>
-            <form role="search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-                    <path d="M21 21l-6 -6" />
-                </svg>
-                <input type="text" placeholder="Buscar trabajos, empresas o habilidades">
+            <form id="empleos-search-form" role="search">
+                <div id="input-search-form">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                    </svg>
+                    <input name="search" id="empleos-search-input" type="text" placeholder="Buscar trabajos, empresas o habilidades">
+                </div>
 
+                <section class="category">
+                    <select name="tecnologia" id="filter-technology">
+                        <option value="null">Tecnología</option>
+                        <option value="php">php</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                    </select>
+                    <select name="ubicacion" id="filter-location">
+                        <option value="null">Ubicación</option>
+                        <option value="cdmx">CDMX</option>
+                        <option value="guadalajara">Guadalajara</option>
+                        <option value="monterrey">Monterrey</option>
+                        <option value="queretaro">Querétaro</option>
+                        <option value="remoto">Remoto</option>
+                    </select>
+                    <select name="contrato" id="filter-contract">
+                        <option value="null">Tipo de contrato</option>
+                        <option value="permanente">Permanente</option>
+                        <option value="proyecto">Proyecto</option>
+                    </select>
+                    <select name="experiencia" id="filter-experience">
+                        <option value="null">Nivel de experiencía</option>
+                        <option value="unaño">1 año</option>
+                        <option value="tresaños">3 años</option>
+                        <option value="cincoaños">5 años</option>
+                        <option value="diezaños">10 años</option>
+                    </select>
+                </section>
             </form>
-            <section class="category">
-                <select name="tecnologia" id="filter-technology">
-                    <option value="null">Tecnología</option>
-                    <option value="php">php</option>
-                    <option value="typescript">TypeScript</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="python">Python</option>
-                </select>
-                <select name="ubicacion" id="filter-location">
-                    <option value="null">Ubicación</option>
-                    <option value="cdmx">CDMX</option>
-                    <option value="guadalajara">Guadalajara</option>
-                    <option value="monterrey">Monterrey</option>
-                    <option value="queretaro">Querétaro</option>
-                    <option value="remoto">Remoto</option>
-                </select>
-                <select name="contrato" id="filter-contract">
-                    <option value="null">Tipo de contrato</option>
-                    <option value="permanente">Permanente</option>
-                    <option value="proyecto">Proyecto</option>
-                </select>
-                <select name="experiencia" id="filter-experience">
-                    <option value="null">Nivel de experiencía</option>
-                    <option value="unaño">1 año</option>
-                    <option value="tresaños">3 años</option>
-                    <option value="cincoaños">5 años</option>
-                    <option value="diezaños">10 años</option>
-                </select>
-            </section>
         </div>
         <div>
             <section class="search-results">

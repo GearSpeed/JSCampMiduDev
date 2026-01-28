@@ -100,19 +100,30 @@ header {
 }
 
 form[role="search"] {
-  background-color: var(--input-bg);
   width: 100vh;
-  border: 2px solid;
-  border-color: var(--border);
-  border-radius: 0.5rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-left: 1rem;
-  gap: 0.5rem;
-  
-  &:focus-within{
-    outline: auto;
+  gap: 1rem;
+
+  #input-search-form{
+    background-color: var(--input-bg);
+    max-width: 100vh;
+    border: 2px solid;
+    border-color: var(--border);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    gap: 0.5rem;
+
+    &:focus-within{
+      outline: auto;
+    }
   }
 }
 
@@ -149,7 +160,7 @@ input[type="text"] {
   font-family: inherit;
   background-color: transparent;
   border: none;
-  width: 100vh;
+  width: 98vh;
   outline: none;
 }
 

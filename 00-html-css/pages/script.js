@@ -102,3 +102,26 @@ filterExperience?.addEventListener('change', ()=>{
         }
     })
 })
+
+/* const searchInput = document.querySelector('#empleos-search-input')
+
+searchInput.addEventListener('input', ()=>{
+    console.log(searchInput.value)
+})
+
+searchInput.addEventListener('blur', ()=>{
+    console.log('Se dispara cuando el campo pierde el foco')
+})
+
+const searchForm = document.querySelector('#empleos-search-form')
+
+searchForm.addEventListener('submit',(event)=>{
+    event.preventDefault() //Previene que se recargue la página
+
+    console.log('submit')
+})
+
+document.addEventListener('keydown', (event)=>{
+    console.log('Tecla presionada: ',event.key)
+})
+ */
