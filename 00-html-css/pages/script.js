@@ -51,7 +51,8 @@ filterLocation?.addEventListener('change', () => {
     const cards = document.querySelectorAll('.job-listing-card')
 
     cards.forEach(card => {
-        const description = card.textContent.toLowerCase()
+        //APLICANDO ESTILO FLEX CON  EL ATRIBUTO STYLE
+        /* const description = card.textContent.toLowerCase()
 
         if (selectedLocation === 'null'){
             card.style.display = 'flex'
@@ -59,7 +60,20 @@ filterLocation?.addEventListener('change', () => {
             card.style.display = 'flex'
         } else {
             card.style.display = 'none'
-        }
+        } */ 
+
+        //APLICANDO CLASE IS-HIDDEN ** Sin Ramificar mi código con if **
+        const modalidad = card.getAttribute('data-modalidad')
+        const isShow = selectedLocation === 'null' || selectedLocation === modalidad //Aqui se hace la condición
+
+        card.classList.toggle('is-hidden', !isShow) //si isShow es false, se agrega la clase is-hidden
+        
+        //EL CÓDIGO ANTERIOR PERO RAMIFICADO
+        /* if(selectedLocation === 'null' || selectedLocation === modalidad){
+            card.classList.remove('is-hidden')
+        } else {
+            card.classList.add('is-hidden')
+        } */
     })
 })
 
