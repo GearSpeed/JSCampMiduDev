@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevJobs - Empleos</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./main.js"></script>
+
+    <script type="module">
+
+        let element = document.getElementById('1')
+        element.className = 'is-active';
+
+        window.addEventListener('keydown', e => {
+            if (e.key > '0' && e.key < '8'){
+                
+                element.className = '';
+                element = document.getElementById(e.key)
+                switch (e.key){
+                    case '1':
+                        element.className = 'is-active';
+                        break;
+                    case '2':
+                        element.className = 'is-active';
+                        break;
+                    case '3':
+                        element.className = 'is-active';
+                        break;
+                    case '4':
+                        element.className = 'is-active';
+                        break;
+                    case '5':
+                        element.className = 'is-active';
+                        break;
+                    case '6':
+                        element.className = 'is-active';
+                        break;
+                    case '7':
+                        element.className = 'is-active';
+                        break;
+                    default:
+                        break;
+                }
+            }
+        })
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="container-links">
+            <h1>DevJobs</h1>
+    
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="./jobs.html">Empleos</a>
+                <a href="">Empresas</a>
+                <a href="">Salarios</a>
+            </nav>
+        </div>
+
+        <div>
+            <devjobs-avatar></devjobs-avatar>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1 id="title-jobs">Encuentra tu próximo trabajo</h1>
+            <p>Explora miles de oportunidades en el sector tecnológico</p>
+        </div>
+        <div>
+            <form id="empleos-search-form" role="search">
+                <div id="input-search-form">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                    </svg>
+                    <input name="search" id="empleos-search-input" type="text" placeholder="Buscar trabajos, empresas o habilidades">
+                </div>
+
+                <section class="category">
+                    <select name="tecnologia" id="filter-technology">
+                        <option value="null">Tecnología</option>
+                        <option value="php">php</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                    </select>
+                    <select name="ubicacion" id="filter-location">
+                        <option value="null">Ubicación</option>
+                        <option value="cdmx">CDMX</option>
+                        <option value="guadalajara">Guadalajara</option>
+                        <option value="monterrey">Monterrey</option>
+                        <option value="queretaro">Querétaro</option>
+                        <option value="remoto">Remoto</option>
+                    </select>
+                    <select name="contrato" id="filter-contract">
+                        <option value="null">Tipo de contrato</option>
+                        <option value="permanente">Permanente</option>
+                        <option value="proyecto">Proyecto</option>
+                    </select>
+                    <select name="experiencia" id="filter-experience">
+                        <option value="null">Nivel de experiencía</option>
+                        <option value="unaño">1 año</option>
+                        <option value="tresaños">3 años</option>
+                        <option value="cincoaños">5 años</option>
+                        <option value="diezaños">10 años</option>
+                    </select>
+                </section>
+            </form>
+        </div>
+        <div>
+            <section class="search-results">
+                <h2>Resultado de búsqueda</h2>
+                <div class="jobs-listings">
+                    <!-- Aquí se generan dinámicamente los article-->
+                </div>
+            </section>
+        </div>
+
+        <nav class="pagination">
+            <button>Primera</button>
+            <a href="#">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M15 6l-6 6l6 6" />
+                </svg>
+            </a>
+            <a id="1" href="#">1</a>
+            <a id="2" href="#">2</a>
+            <a id="3" href="#">3</a>
+            <a id="4" href="#">4</a>
+            <a id="5" href="#">5</a>
+            <a id="6" href="#">6</a>
+            <a id="7" href="#">7</a>
+            <a href="#">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 6l6 6l-6 6" />
+                </svg>
+            </a>
+            <button>Última</button>
+        </nav>
+    </main>
+    <footer>
+        <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+    </footer>
+</body>
+</html> 
