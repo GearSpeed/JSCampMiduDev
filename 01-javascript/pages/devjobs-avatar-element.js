@@ -1,17 +1,37 @@
 class DevJobsAvatar extends HTMLElement{
     constructor(){
-        super(); //llamar al constructor HTMLElement
+        super(); //* llamar al constructor HTMLElement
 
-        this.attachShadow({mode: 'open'})
+        this.attachShadow({mode: 'open'}) //* Los estilos externeos no afectan a lo que dentro
+    }
+
+    createUrl(service, username){
+        return `https://unavatar.io/${service}/${username}`
     }
 
     render() {
-        this.shadowRoot.innerHTML = `
-        <img
-            src="https://api.dicebear.com/9.x/adventurer/svg?seed=Aiden"
-            alt="avatar" 
-            width="40px"
 
+        const service = this.getAttribute('service') ?? 'github'
+        const username = this.getAttribute('username') ?? 'Usuario'
+        const size = this.getAttribute('size') ?? '40'
+
+        const url = this.createUrl(service, username)
+
+
+        this.shadowRoot.innerHTML = `
+
+        <style>
+            img {
+                width: ${size}px;
+                height: ${size}px;
+                border-radius: 9999px;
+            }
+        </style>
+
+        <img 
+            src="${url}"  
+            alt="Avatar de ${username}"
+            class="avatar"
         />
             `
     }
